@@ -7,7 +7,7 @@ Requirements:
 Optional:
 scitools: http://code.google.com/p/scitools/
 
-Installation
+##Installation
 
 Copy __init__.py and sde.py into the directory, $Python/site-packages/pysde/
 
