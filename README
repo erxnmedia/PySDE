@@ -1,10 +1,11 @@
 PySDE is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
+Now the solvers avails both symbolic solver and numerical solvers (w/o jumps)
 
-Requirements:
+#Requirements:
 1. Sympy: http://sympy.org
 2. Scipy and NumPy:
 
-Optional:
+#Optional:
 scitools: http://code.google.com/p/scitools/
 
 ##Installation
@@ -12,9 +13,12 @@ scitools: http://code.google.com/p/scitools/
 Copy __init__.py and sde.py into the directory, $Python/site-packages/pysde/
 
 ##Note
+
 Althought this module is tested for Python2.6~2.7, it can run for Python3.x by using 2to3 converting the source code. It is also 
 tested on the notebook() interface of both Sage-5.x and IPython-1. 
+
 ##DEMO
+
 python code: http://diffusion.cgu.edu.tw/ftp/sde (demo.py)
 TeXmacs with Python plugin: http://diffusion.cgu.edu.tw/ftp/sde (sdedemo.py)
 TeXmacs with Python plugin: SDE with jumps http://diffusion.cgu.edu.tw/ftp/sde (sdejump.py)
