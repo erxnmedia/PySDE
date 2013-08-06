@@ -507,7 +507,7 @@ where $\phi$ is chosen so as to make $\int^{\infty}_{-\infty}f(x) d x=1$
     return sol   
 
 
-def euler(a,b,x0=1,t0=0,tn=1,n=200):
+def EulerSim(a,b,x0=1,t0=0,tn=1,n=200):
     x,t =symbols('x t')
     T=tn-t0
     nt=n
