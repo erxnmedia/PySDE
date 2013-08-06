@@ -1,5 +1,5 @@
 PySDE is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
-Now the solvers avails both symbolic solver and numerical solvers (w/o jumps)
+Numerical solvers include schemes for both with and without jumps.
 
 #Requirements:
 1. Sympy: http://sympy.org
