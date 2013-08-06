@@ -1,108 +1,105 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  9 16:18:09 2010
-
-@author: -
-"""
-
 from __future__ import division
-import copy
-from sympy import *
+from sde import * 
 from scitools import *
-from scitools.StringFunction import StringFunction
-from scitools.numpytools import iseq
-from scitools.std import *
-from copy import copy
-from numpy import *
-import numpy as np
-from time import time
-from scitools.easyviz.matplotlib_ import * 
-
-Exnum = 100
-M=100
-N=100
-
-a=StringFunction('1.')
-b=StringFunction('1.')
-c=StringFunction('0.')
-h=StringFunction('1/(1+x*x)')
-
-nx=M+1
-dx=4/float(M)
 
 
-nt=N+1
-dt=1./float(N)
-sqrtdt = sqrt(dt)
-
-
-
-xmesh = linspace(-2, 2, M+1)
-tmesh = linspace(0, 1, N+1)
-Ex=np.zeros([N+1,M+1])
+def __call__(self, *args, **kwargs):
+        import inspect
+        frame = inspect.currentframe().f_back.f_globals
+        nkwargs = {}
+        try:
+            for k, v in kwargs.iteritems():
+                nkwargs[eval(k, frame)] = v
+        finally:
+            del frame
+        return self._subs_dict(nkwargs)
 
 """
-sample 1000
-vectorization calculation: 0.000061035625
-loop calculation: 0.00108408927917
+f.subs({x:1})
+f.subs(dict(x=1))
+f.subs(x=1)
 """
-def ICset(Ex,h):
-    Ex[0,:]=h(xmesh)
-"""
-def ICset2(Ex,h):
-    for i in arange(0,M+1):
-        Ex[0,i]=h(xmesh[i])
-"""
-#t0=time();
-ICset(Ex,h)
-#tt=time()-t0
-#print tt 
-e = np.ones(Exnum,float)
-for j in range(0,nx):
-    bts = np.zeros(Exnum,float)
-    Xts = xmesh[j] *ones(Exnum,float)
-    Is  = np.zeros(Exnum,float)
-    
-    for i in range(1,nt):
-        # vectorization calculation
-        Ex_u = np.zeros(Exnum,float) 
-        db = random.randn(Exnum)*sqrtdt
-        Xts += e*a('Xt') * dt + e*b('Xt') * db
-        Xt=Xts
-  
-        Is += e*c(Xt)*dt
-        Ex_u[:] += e*h(Xt[:])*exp(Is[:])
 
-        Ex[i,j] = sum(Ex_u)/Exnum
-        """
-        # Calculation by loop
-        Ex[i,j] = 0.0
-        for k in range(0, Exnum):
-            bt = bts[k]
-            Xt = Xts[k]
-            Is[k] += 0.#c(Xt)* dt
-            Ex[i,j] += h(Xt) * exp(Is[k])
-            db = random.randn()*sqrtdt
-            bts[k] += db
-            Xts[k] += a(Xt)* dt+ b(Xt) * db
-        Ex[i,j] /= Exnum
-        """
-#tt2=time()-t2
+
+x,dx=symbols('x dx')
+
+ItoInit(x,dx)
+
+r,dr=symbols('r dr')
+
+ItoInit(r,dr)
+
+dw= Symbol('dw')
+w = Symbol('w')
+BrownSingle(w,dw,0)
 
 """
-array calculation: 0.252888917923
-scalar calculation: 20.8320679665
+print CurrentSMG
+print tableIto
+print Driftbydt,ItoIntegral
 """
-counter = 0
-time=counter*dt
-for s in range(0,N):
-    y = Ex[s,:]
-    plot(xmesh,Ex[0,:],xmesh, y, axis=[xmesh[0], xmesh[-1],0.01,1.],
-         xlabel='x', ylabel='fk', legend='time=%0.2f' % time,
-         hardcopy='tmp_%04d.ps' % counter)
-    counter += 1
-    time = counter*dt
-    #time.sleep(0.2)  # can insert a pause to control movie speed
+"""
+test1=ItoIntdb(w*w)
+test2=ItoD(w*w*w)             
+print " The Ito integral of w is %s" %(test1)
+print " The Ito differential of w*w is %s" %(test2)
+"""
+global_assumptions.add(Assume(t, Q.positive))
 
-# make movie file:
-movie('tmp_*.ps' ,encoder='convert', fps=10, output_file='a.gif')
+print ItoIntdb(exp(w))
+print ItoIntdb(w)
+"""
+Mean=simplify(ExpBm(test1))
+print " Expectation of int(w,dw) is %s" %(Mean)
+"""
+[a,b,c,d]=[1,1,1,1]
+coeff=[a,b,c,d]
+"""
+drift=a+b*x
+diffusion=c+d*x
+
+drift=1
+diffusion=2*sqrt(x)
+drift=-x/2
+diffusion=sqrt(1-x*x)
+
+drift=-x/2
+diffusion=sqrt(1-x*x)
+
+# S(n): make rational power
+drift=3*x**(S(1)/3)
+diffusion=3*x**(S(2)/3)
+"""
+drift=a+b*x
+diffusion=c+d*x
+
+X0=Symbol('X0')
+x0=1.
+t0=0
+tn=1
+sol=SDE_solver(drift,diffusion,t0,x0)
+print " Solution of dX =  (%s) dt + (%s) dw  is %s" %(drift,diffusion,sol)
+
+#print ItoD((w+X0**(S(1)/3))**3)
+nt=500
+T= linspace(t0, tn, nt+1)
+#X=euler(drift,diffusion,x0,t0,tn,nt)
+"""
+X,Y=milstein(drift,diffusion,x0,t0,tn,nt)
+
+plot(T, X, 'b-4', T, Y, 'r-3',dpi=1200, hardcopy="test.png")
+"""
+data= fksim_v('1','1','0','1/(1+x*x)')
+
+
+xx=linspace(-2,2,101)
+plot(xx,data[0,:],xx,data[4,:],dpi=1200, hardcopy="test.png")
+show()
+show()
+"""
+plot(t, X,'b-4', t, Y, 'r-3', \
+         legend=('Euler','Milstein'), \
+         dpi=1200, hardcopy="test.png")
+"""
+#sdeplot(drift,diffusion,1,0,1)
+#sdeplot1(coeff,t0,x0,tn)
