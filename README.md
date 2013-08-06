@@ -1,6 +1,6 @@
 #Introduction
 
-**Py$S^3$DE** is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
+**PySDE** is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
 Numerical solvers include schemes for both with and without jumps.
 
 #Requirements:
