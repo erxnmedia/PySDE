@@ -18,6 +18,7 @@ tested on the notebook() interface of both Sage-5.x and IPython-1.
 python code: http://diffusion.cgu.edu.tw/ftp/sde (demo.py)
 TeXmacs with Python plugin: http://diffusion.cgu.edu.tw/ftp/sde (sdedemo.py)
 TeXmacs with Python plugin: SDE with jumps http://diffusion.cgu.edu.tw/ftp/sde (sdejump.py)
+Sage notebook(): http://diffusion.cgu.edu.tw/ftp/sde DiffusionJumps.sws, DiffusionJumps-1.sws
 
 Developer:
 chu-ching huang: cchuang2009@gmail.com
