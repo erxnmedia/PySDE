@@ -493,7 +493,11 @@ where $\phi$ is chosen so as to make $\int^{\infty}_{-\infty}f(x) d x=1$
         phi=C/gamma(B/C)/gamma(-(1+A/B)*B/C)*gamma(-A/C)
         sol=phi*x**(B/C-1)*(1-x)**(-B/C-A/C-1)/C
     else:
+<<<<<<< HEAD
 	"""
+=======
+  """
+>>>>>>> d50ff72a7bf99572dd331b81cfb839e4007b54ff
 	General Case:
 	  $\phi*exp(\int^x \mu/\sigma^2 d x)/sigma^2$      
 	"""
