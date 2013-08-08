@@ -6,7 +6,7 @@ Numerical solvers include schemes for both with and without jumps.
 ##Requirements:
 
 1. Sympy: http://sympy.org
-2. Scipy and NumPy:
+2. Scipy and NumPy: http://www.scipy.org
 
 ##Optional:
 scitools: http://code.google.com/p/scitools/
