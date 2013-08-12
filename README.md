@@ -15,7 +15,7 @@ scitools: http://code.google.com/p/scitools/
 
 ##Installation
 
-Copy **__init__.py** and **sde.py** into the directory, $Python/site-packages/pysde/
+Copy **\_\_init\_\_.py** and **sde.py** into the directory, $Python/site-packages/pysde/
 
 ##Note
 
