@@ -19,9 +19,9 @@ Copy **\_\_init\_\_.py** and **sde.py** into the directory, $Python/site-package
 
 ##Note
 
-Althought this module is tested for Python2.6~2.7, it can run for Python3.x by using 2to3 converting the source code. It is also
+* Althought this module is tested in Python2.6~2.7, it can also run in Python3.x by using 2to3 converting the source code. It is also
 tested on the notebook() interface of both Sage-5.x and IPython-1.
-
+* **PyS<sup>3</sup>DE** also avails the **plot** function, sdeplot, based on *scitools*; but it only works in python-2.x but not python-3.x since scitools is a python-2.x library. Thanks for Matplotlib
 ##DEMO
 
 1. python code: http://diffusion.cgu.edu.tw/ftp/sde (demo.py)
