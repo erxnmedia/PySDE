@@ -7,10 +7,11 @@ Numerical solvers include schemes for both with and without jumps.
 
 ##Requirements:
 
-1. <a href="http://sympy.org">Sympy</></br>
+1. <a href="http://sympy.org">Sympy</br>
 2. <a href="http://www.scipy.org">Scipy and Numpy</a></br>
-3. 
+ 
 ##Optional:
+
 1. <a href="http://code.google.com/p/scitools/">scitools</a><br>
 2. <a href="http://matplotlib.org">matplotlib</a>
 
