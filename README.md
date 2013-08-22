@@ -11,9 +11,8 @@ Numerical solvers include schemes for both with and without jumps.
 2. Scipy and NumPy: http://www.scipy.org
 
 ##Optional:
-
-*<a href="http://code.google.com/p/scitools/">scitools</a>
-*<a href="http://matplotlib.org">matplotlib</a>
+1. <a href="http://code.google.com/p/scitools/">scitools</a><br>
+2. <a href="http://matplotlib.org">matplotlib</a>
 
 ##Installation
 
