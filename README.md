@@ -19,6 +19,28 @@ Numerical solvers include schemes for both with and without jumps.
 
 Copy **\_\_init\_\_.py** and **sde.py** into the directory, $Python/site-packages/pysde/
 
+<
+##Usages
+
+* Symbolic Computation
+<pre>
+from sympy import *
+from pysde import *
+
+x,dx,w,dw,t,dt,a=symbols('x dx w dw t dt a')
+x0 =Symbol('x0'); t0 = Symbol('t0')
+drift=2*x/(1+t)-a*(1+t)**2;diffusion=a*(1+t)**2
+sol=SDE_solver(drift,diffusion,t0,x0)
+pprint(sol)  
+</pre>
+Got
+<pre>
+       2 ⎛              2                2               2     ⎞
+(t + 1) ⋅⎝- a⋅t⋅(t₀ + 1)  + a⋅t₀⋅(t₀ + 1)  + a⋅w⋅(t₀ + 1)  + x₀⎠
+────────────────────────────────────────────────────────────────
+                                   2                            
+                           (t₀ + 1)                             
+</pre>
 ##Note
 
 * Althought this module is tested in Python2.6~2.7, it can also run in Python3.x by using 2to3 converting the source code. It is also
