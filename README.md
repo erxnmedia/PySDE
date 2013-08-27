@@ -19,14 +19,14 @@ Numerical solvers include schemes for both with and without jumps.
 
 Copy **\_\_init\_\_.py** and **sde.py** into the directory, $Python/site-packages/pysde/
 
-<
+
 ##Usages
 
 * Symbolic Computation
 <pre>
 from sympy import *
 from pysde import *
-
+""" Main Codes Here """
 x,dx,w,dw,t,dt,a=symbols('x dx w dw t dt a')
 x0 =Symbol('x0'); t0 = Symbol('t0')
 drift=2*x/(1+t)-a*(1+t)**2;diffusion=a*(1+t)**2
@@ -40,6 +40,35 @@ Got
 ────────────────────────────────────────────────────────────────
                                    2                            
                            (t₀ + 1)                             
+</pre>
+* Numeric Computation
+<pre>
+import matplotlib.pylab as plt
+from matplotlib import rc
+rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+rc('text', usetex=True)
+""" setup picture info """
+plt.figure(figsize=(5,2))
+plt.ylim(-0.5,1.5)
+""" Intialial data """
+x0=1.;t0=0.;tn=10.
+x,dx=symbols('x dx')
+[a,b,c,d]=[0,-1.,0,1.]
+drift=a+b*x
+diffusion=c+d*x#
+nt=200
+T= linspace(t0, tn, nt+1)
+""" Numerical Computation"""
+X=Euler(drift,diffusion,x0,t0,tn,nt)
+X,Y=Milstein(drift,diffusion,x0,t0,tn,nt)
+"""Make picture"""
+plt.plot(T, X, color="blue", linewidth=2.5, linestyle="-", label="Euler")
+plt.plot(T, X, color="red", linewidth=2.5, linestyle="--", label="Milstein")
+plt.plot(T, np.exp(-T), color="green", linewidth=2.5, linestyle="--", label=r"$\exp(-t)$")
+plt.ylim(X.min()-0.2, X.max()+0.2)
+plt.title(r"$d X_t=-dt+d W_t,X_0=1$")
+plt.legend()
+plt.savefig('Milstein.eps')
 </pre>
 ##Note
 
