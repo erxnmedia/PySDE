@@ -34,13 +34,16 @@ sol=SDE_solver(drift,diffusion,t0,x0)
 pprint(sol)  
 </pre>
 Got
-<pre>
-       2 ⎛              2                2               2     ⎞
-(t + 1) ⋅⎝- a⋅t⋅(t₀ + 1)  + a⋅t₀⋅(t₀ + 1)  + a⋅w⋅(t₀ + 1)  + x₀⎠
-────────────────────────────────────────────────────────────────
-                                   2                            
-                           (t₀ + 1)                             
-</pre>
+
+&nbsp; (<i>t</i>+1)<sup>2</sup> *<big><big><big>(</big></big></big>-
+<i>a</i>⋅<i>t</i>⋅(<i>t</i>₀ + 1)<sup>2</sup>+ <i>a</i>⋅<i>t</i>₀⋅(<i>t</i>₀
++ 1)<sup>2</sup>+ <i>a</i>⋅<i>w</i>⋅(<i>t</i>₀ + 1)<sup>2</sup>
++ <i>x</i>₀<big><big><big>)</big></big></big><br>
+────────────────────────────────────────────────
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+(<i>t</i>₀ + 1)<sup>2</sup>
+
 * Numeric Computation
 <pre>
 import matplotlib.pylab as plt
