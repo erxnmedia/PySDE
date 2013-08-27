@@ -62,7 +62,7 @@ X=Euler(drift,diffusion,x0,t0,tn,nt)
 X,Y=Milstein(drift,diffusion,x0,t0,tn,nt)
 """Make picture"""
 plt.plot(T, X, color="blue", linewidth=2.5, linestyle="-", label="Euler")
-plt.plot(T, X, color="red", linewidth=2.5, linestyle="--", label="Milstein")
+plt.plot(T, Y, color="red", linewidth=2.5, linestyle="--", label="Milstein")
 plt.plot(T, np.exp(-T), color="green", linewidth=2.5, linestyle="--", label=r"$\exp(-t)$")
 plt.ylim(X.min()-0.2, X.max()+0.2)
 plt.title(r"$d X_t=-dt+d W_t,X_0=1$")
