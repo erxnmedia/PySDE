@@ -50,7 +50,7 @@ rc('text', usetex=True)
 """ setup picture info """
 plt.figure(figsize=(5,2))
 plt.ylim(-0.5,1.5)
-""" Intialial data """
+""" Initial data """
 x0=1.;t0=0.;tn=10.
 x,dx=symbols('x dx')
 [a,b,c,d]=[0,-1.,0,1.]
