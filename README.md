@@ -73,7 +73,7 @@ plt.savefig('Milstein.eps')
 
 * Althought this module is tested in Python2.6~2.7, it can also run in Python3.x by using 2to3 converting the source code. It is also
 tested on the notebook() interface of both Sage-5.x and IPython-1.
-Or try <a href="https://github.com/cchuang2009/PyS-3DE-for-Python3">the sources of other branch</a>. This 
+Or try <a href="https://github.com/cchuang2009/PySDE/blob/python-3.x/">the sources of other branch</a>. This 
 version gets rid of the scitools packages since it is developed based on &lt;  Python-3.x.
 
 * **PyS<sup>3</sup>DE** also avails the **plot** function, sdeplot, based on *scitools*; but it
