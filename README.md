@@ -35,10 +35,10 @@ pprint(sol)
 </pre>
 Got
 
-(<i>t</i>+1)<sup>2</sup> <big><big><big>(</big></big></big>
+&nbsp;&nbsp;&nbsp;&nbsp;(<i>t</i>+1)<sup>2</sup> <big><big><big>(</big></big></big>
 <i>a</i><i>t</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>a</i> <i>t</i>₀(<i>t</i>₀+ 1)<sup>2</sup>+ <i>a</i><i>w</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>x</i>₀<big><big><big>)</big></big></big><br>
-───────────────────────────<br>
-    (<i>t</i>₀ + 1)<sup>2</sup>
+&nbsp;&nbsp;&nbsp;&nbsp;───────────────────────────<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    (<i>t</i>₀ + 1)<sup>2</sup>
 
 * Numeric Computation
 <pre>
