@@ -37,7 +37,7 @@ pprint(sol)
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<i>t</i>+1)<sup>2</sup> <big><big><big>(</big></big></big>
-<i>a</i><i>t</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>a</i> <i>t</i>₀(<i>t</i>₀+ 1)<sup>2</sup>+ <i>a</i><i>w</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>x</i>₀<big><big><big>)</big></big></big><br>
+-<i>a</i><i>t</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>a</i> <i>t</i>₀(<i>t</i>₀+ 1)<sup>2</sup>+ <i>a</i><i>w</i>(<i>t</i>₀ + 1)<sup>2</sup>+ <i>x</i>₀<big><big><big>)</big></big></big><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;───────────────────────────<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
