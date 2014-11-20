@@ -13,7 +13,7 @@ Numerical solvers include schemes for both with and without jumps.
 2. <a href="http://www.scipy.org">Scipy and Numpy</a></br>
 3. <a href="http://code.google.com/p/scitools/">scitools</a><br> 
   
-<b>Note:</b> Scitools is used to generated the picture of simulated data only. To keep minimal necessary Python modules/libraries, it would be removed in TODO list.
+<b>Note:</b> Scitools is used to generated the picture of simulated data only. To keep minimal necessary Python modules/libraries, it would be removed in TODO list. (Thanks, Yoav Ram)
 
 ##Optional:
 
