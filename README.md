@@ -1,21 +1,24 @@
 #Introduction
 
-##**PyS<sup>3</sup>DE** = **Py**thon Solver via **S**ympy + **S**ciPy/NumPy for **S**tochastic **D**ifferential **E**quations!
+<h2>PyS<sup>3</sup>DE</h2> = **Py**thon Solver via **S**ympy + **S**ciPy/NumPy for **S**tochastic **D**ifferential **E**quations!
 
 
 **PyS<sup>3</sup>DE** is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
 Numerical solvers include schemes for both with and without jumps.
 <br>
 
-##Requirements:
+<h2>Requirements:</h2>
 
 1. <a href="http://sympy.org">Sympy</br>
 2. <a href="http://www.scipy.org">Scipy and Numpy</a></br>
- 
+3. <a href="http://code.google.com/p/scitools/">scitools</a><br> 
+  
+<b>Note:</b> Scitools is used to generated the picture of simulated data only. To keep minimal necessary Python modules/libraries, it would be removed in TODO list.
+
 ##Optional:
 
-1. <a href="http://code.google.com/p/scitools/">scitools</a><br>
-2. <a href="http://matplotlib.org">matplotlib</a>
+
+1. <a href="http://matplotlib.org">matplotlib</a>
 
 ##Installation
 
