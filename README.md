@@ -1,6 +1,6 @@
 #Introduction
 
-<h2>PyS<sup>3</sup>DE</h2> = **Py**thon Solver via **S**ympy + **S**ciPy/NumPy for **S**tochastic **D**ifferential **E**quations!
+<h2>PyS<sup>3</sup>DE= <b>Py</b>thon Solver via <b>S</b>ympy + </b>S</b>ciPy/NumPy for <b>S</b>tochastic <b>D</b>ifferential <b>E</b>quations!</h2> 
 
 
 **PyS<sup>3</sup>DE** is a solver of stochastic differential equations (SDE) implemented by Python, which both symbolic and numeric schemems are supported.
