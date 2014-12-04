@@ -65,8 +65,8 @@ try:
 
 except ImportError:
     pass
-<<<<<<< HEAD
+
 """
 =======
 """
->>>>>>> d50ff72a7bf99572dd331b81cfb839e4007b54ff
+
