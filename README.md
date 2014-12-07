@@ -11,18 +11,33 @@ Numerical solvers include schemes for both with and without jumps.
 
 1. <a href="http://sympy.org">Sympy</br>
 2. <a href="http://www.scipy.org">Scipy and Numpy</a></br>
-3. <a href="http://code.google.com/p/scitools/">scitools</a><br> 
+3. <a href="http://matplotlib.org">matplotlib</a>
+
   
-<b>Note:</b> Scitools is used to generated the picture of simulated data only. To keep minimal necessary Python modules/libraries, it would be removed in TODO list. (Thanks, Yoav Ram)
+<b>Note:</b> Scitools is used to generated the picture of simulated data only. 
+To keep minimal necessary Python modules/libraries, it would be removed in TODO list. (Thanks, Yoav Ram)
+Necessary required submodules of scitools have been added to PySDE since 0.4; this means that scitools is not to be installed.
 
 ##Optional:
 
-
-1. <a href="http://matplotlib.org">matplotlib</a>
+3. <a href="http://code.google.com/p/scitools/">scitools</a><br> 
 
 ##Installation
 
-Copy **\_\_init\_\_.py** and **sde.py** into the directory, $Python/site-packages/pysde/
+
+- Python2 version: cd Python2; python setup.py install
+- Python3 version: cd Python3; python setup.py install
+
+## Demos
+
+the files in demos include
+
+- DiffusionJumps-1.sws  DiffusionJumps.sws (for Sage notebook)
+- demo.py 
+- sdedemo.tm, sdeJump.tm  (for TeXmacs and Python plugin)
+- sdedemo.ipynb (for IPython notebook)
+- sdedemo.pdf 
+
 
 
 ##Usages
