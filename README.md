@@ -24,9 +24,10 @@ Necessary required submodules of scitools have been added to PySDE since 0.4; th
 
 ##Installation
 
+- Extract the source and enter the source directory
 
-- Python2 version: cd Python2; python setup.py install
-- Python3 version: cd Python3; python setup.py install
+   - Python2 version: cd Python2; python setup.py install
+   - Python3 version: cd Python3; python setup.py install
 
 ## Demos
 
@@ -94,16 +95,13 @@ plt.title(r"$d X_t=-dt+d W_t,X_0=1$")
 plt.legend()
 plt.savefig('Milstein.eps')
 </pre>
+
 ##Note
 
-* Althought this module is tested in Python2.6~2.7, it can also run in Python3.x by using 2to3 converting the source code. It is also
-tested on the notebook() interface of both Sage-5.x and IPython-1.
-Or try <a href="https://github.com/cchuang2009/PySDE/blob/python-3.x/">the sources of other branch</a>. This 
-version gets rid of the scitools packages since it is developed based on &lt;  Python-3.x.
-
-* **PyS<sup>3</sup>DE** also avails the **plot** function, sdeplot, based on *scitools*; but it
-only works in python-2.x but not python-3.x since scitools is a python-2.x library. Thanks for Matplotlib
-which provides plot functions, capable of doing high-performance pictures.
+* Symbolic/Numberic SDE solvers depend on part of the Scitools module which had been extracted and incorporated with the library, 
+  which which it is not necessary to install scitools again.
+ 
+* Schemes for simulating SDE’s with jumps adds, see demo.
 
 ##DEMO
 
