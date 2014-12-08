@@ -99,7 +99,7 @@ plt.savefig('Milstein.eps')
 ##Note
 
 * Symbolic/Numberic SDE solvers depend on part of the Scitools module which had been extracted and incorporated with the library, 
-  which which it is not necessary to install scitools again.
+  which it is not necessary to install scitools again.
  
 * Schemes for simulating SDE’s with jumps adds, see demo.
 
