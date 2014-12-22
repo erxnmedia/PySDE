@@ -79,7 +79,7 @@ plt.ylim(-0.5,1.5)
 x0=1.;t0=0.;tn=10.
 x,dx=symbols('x dx')
 [a,b,c,d]=[0,-1.,0,1.]
-drift=a+b*x
+drift=a+b\*x
 diffusion=c+d\*x#
 nt=200
 T= linspace(t0, tn, nt+1)
