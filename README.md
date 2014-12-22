@@ -50,7 +50,7 @@ from pysde import *
 """ Main Codes Here """
 x,dx,w,dw,t,dt,a=symbols('x dx w dw t dt a')
 x0 =Symbol('x0'); t0 = Symbol('t0')
-drift=2*x/(1+t)-a*(1+t)**2;diffusion=a*(1+t)**2
+drift=2\*x/(1+t)-a\*(1+t)\*\*2;diffusion=a\*(1+t)**2
 sol=SDE_solver(drift,diffusion,t0,x0)
 pprint(sol)  
 </pre>
