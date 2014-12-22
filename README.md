@@ -70,7 +70,7 @@ pprint(sol)
 <pre>
 import matplotlib.pylab as plt
 from matplotlib import rc
-rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+rc('font',\*\*{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
 """ setup picture info """
 plt.figure(figsize=(5,2))
@@ -80,7 +80,7 @@ x0=1.;t0=0.;tn=10.
 x,dx=symbols('x dx')
 [a,b,c,d]=[0,-1.,0,1.]
 drift=a+b*x
-diffusion=c+d*x#
+diffusion=c+d\*x#
 nt=200
 T= linspace(t0, tn, nt+1)
 """ Numerical Computation"""
