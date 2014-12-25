@@ -44,7 +44,7 @@ if __name__ == "__main__":
    install_requires = check_dependencies()
    setup(
        name = "pysde",
-       version = “1.0.4”,
+       version = "1.0.4",
        author = "chu-ching huang",
        author_email = "cchuang2009@gmail.com",
        description = ("Python Solver via Sympy + SciPy/NumPy for Stochastic Differential Equations!"),
