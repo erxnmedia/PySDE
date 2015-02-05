@@ -46,7 +46,7 @@ the files in demos include
 * Symbolic Computation
 <pre>
 from sympy import *
-from pysde import *
+from pysde.sde import *
 """ Main Codes Here """
 x,dx,w,dw,t,dt,a=symbols('x dx w dw t dt a')
 x0 =Symbol('x0'); t0 = Symbol('t0')
