@@ -1,9 +1,6 @@
 
-from pysde import sde
-from pysde.sde import *
+from pysde import *
 from sympy import *
-#from scitools import *
-
 
 def __call__(self, *args, **kwargs):
         import inspect
